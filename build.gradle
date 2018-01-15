@@ -44,6 +44,9 @@ dependencies {
     compile('io.jsonwebtoken:jjwt:0.7.0')
     compile('net.logstash.logback:logstash-logback-encoder:4.9')
 
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.6'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')
     testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -54,4 +57,6 @@ dependencies {
     testCompile('org.junit.platform:junit-platform-launcher:1.0.2')
     testCompile('org.junit.platform:junit-platform-runner:1.0.2')
     testCompile('com.github.sbrannen:spring-test-junit5:1.0.2')
+    testCompile('com.h2database:h2:1.4.192')
+
 }
