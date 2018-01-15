@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 set -x
 set -e
+export RANCHER_URL=http://10.202.129.18:8080/v2-beta/projects/1a5
+export RANCHER_ACCESS_KEY=948B1C2BB5B74DEA1E82
+export RANCHER_SECRET_KEY=fpWkrio33Eq1thW2kTdrzmW6dANVRaS5LCVgb6zt
 
 function test {
     docker run --rm -v /tmp/gradle-caches:/root/.gradle/caches -v $WORKDIR/pipelines/$GO_PIPELINE_NAME:/opt/app -w /opt/app gradle:4.4.1-jdk8 gradle clean test
