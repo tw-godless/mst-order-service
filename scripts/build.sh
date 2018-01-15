@@ -26,7 +26,7 @@ function deploy {
 
         sed -i "s#<IMAGE_NAME>#$IMAGE_NAME#g" docker-compose.yml
 
-        rancher-compose -p mst-user-service up -d -c --upgrade
+        rancher-compose -p mst-order-service up -d -c --upgrade
 }
 
 case $1 in
