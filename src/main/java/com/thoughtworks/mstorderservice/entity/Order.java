@@ -2,8 +2,7 @@ package com.thoughtworks.mstorderservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +13,9 @@ import java.math.BigDecimal;
 @JsonSerialize
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Order implements Serializable {
 
     @Id
