@@ -30,7 +30,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().cacheControl().and().contentTypeOptions().and().frameOptions();
         http.headers().xssProtection().and().httpStrictTransportSecurity();
 
-        http.authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests()
+            .antMatchers(HttpMethod.GET, "/health").permitAll()
+            .anyRequest().authenticated();
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 

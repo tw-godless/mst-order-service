@@ -1,11 +1,13 @@
 package com.thoughtworks.mstorderservice.shoppingcart;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
+@AllArgsConstructor
 public class Item {
     @JsonProperty("good_id")
     private Long goodsId;

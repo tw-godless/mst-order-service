@@ -24,7 +24,7 @@ public class ShoppingCartController {
     }
 
     @GetMapping(path = "/{id}")
-    public List<Item> findById(@PathVariable("id") Long id) {
+    public List<GoodsDetailDTO> findById(@PathVariable("id") Long id) {
         return shoppingCartService.findById(id);
     }
 }
