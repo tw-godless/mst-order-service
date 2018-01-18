@@ -25,11 +25,11 @@ function deploy {
       DOCKER_REGISRTY=10.202.129.18:5000
     fi
    
-        IMAGE_NAME=${DOCKER_REGISRTY}/tw-godless/order-service:${GO_PIPELINE_COUNTER}
+    IMAGE_NAME=${DOCKER_REGISRTY}/tw-godless/order-service:${GO_PIPELINE_COUNTER}
 
-        sed -i "s#<IMAGE_NAME>#$IMAGE_NAME#g" docker-compose.yml
+    sed -i "s#<IMAGE_NAME>#$IMAGE_NAME#g" docker-compose.yml
 
-        rancher-compose -p mst-order-service up -d -c --upgrade
+    rancher-compose -p mst-order-service up -d -c --upgrade
 }
 
 case $1 in
